@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragment5">
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.patikadev.deneme1.FragmentProfile"
+        android:label="Fragment1"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_fragment1_to_fragment2"
+            app:destination="@id/fragment2"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/action_fragment1_to_fragment4"
+            app:destination="@id/fragment4"
+            app:enterAnim="@anim/enter_from_top"
+            app:exitAnim="@anim/exit_to_bottom"
+            app:popEnterAnim="@anim/enter_from_bottom"
+            app:popExitAnim="@anim/exit_to_top"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.patikadev.deneme1.FragmentDeck"
+        android:label="Fragment2"
+
+        tools:layout="@layout/fragment_deck">
+        <action
+            android:id="@+id/action_fragment2_to_fragment33"
+            app:destination="@id/fragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.patikadev.deneme1.FragmentBattle"
+        android:label="Fragment3"
+
+        tools:layout="@layout/fragment_battle" />
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="com.patikadev.deneme1.recyclerview.FragmentRecyclerViewSample"
+        android:label="Fragment4"
+        tools:layout="@layout/fragment_recyclerview_sample" />
+
+    <fragment
+        android:id="@+id/fragment5"
+        android:name="com.patika.homework3.ui.recyclerview.fragments.FragmentSplash"
+        android:label="Fragment5">
+
+        <action
+            android:id="@+id/action_fragment5_to_fragment1"
+            app:destination="@id/fragment1"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:popUpTo="@id/fragment5"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+</navigation>
