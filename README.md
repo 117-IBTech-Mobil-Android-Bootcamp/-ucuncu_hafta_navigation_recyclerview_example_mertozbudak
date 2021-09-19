@@ -1,0 +1,2 @@
+# -ucuncu_hafta_navigation_recyclerview_example_mertozbudak
+Third homework
